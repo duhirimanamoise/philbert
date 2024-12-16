@@ -1,0 +1,546 @@
+/* General Styling */
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f9;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  /* Header Styling */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Navigation Links */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #f4a261;
+  }
+  
+  /* Dropdown Menu for Mobile */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      z-index: 100;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #444;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 100;
+    }
+  
+    .nav-links.show {
+      display: flex;
+      z-index: 100;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+      z-index: 100;
+    }
+  
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      z-index: 100;
+    }
+  }
+  
+  /* About Section Styling */
+  #about .info {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  #about p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #about p {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+  
+  /* Skills Section Styling */
+  #skills {
+    background: #f4f4f9;
+    padding: 20px;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .skill {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 90%; /* Adjust to fit smaller screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .skill h3 {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .skill ul {
+    list-style: disc;
+    margin-left: 20px;
+    list-style-type: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .skill {
+      width: 95%;
+    }
+  }
+  
+  /* Achievements Section Styling */
+  #achievements {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #achievements ul {
+    list-style: disc;
+    margin: 10px auto;
+    max-width: 90%;
+    text-align: left;
+    list-style-type: none;
+  }
+  
+  #achievements li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 16px;
+    list-style-type: none;
+  }
+  
+  /* Gallery Styling (Soccer Images) */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .gallery img {
+    width: 30%; /* Make images smaller for smaller screens */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .gallery img {
+      width: 45%; /* Larger images for smaller screens */
+    }
+  }
+  
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-container div {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-container h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f4a261;
+  }
+  
+  .footer-container p,
+  .footer-container ul {
+    margin: 0;
+    line-height: 1.8;
+  }
+  
+  .footer-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-container ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-container ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-container ul li a:hover {
+    color: #f4a261;
+  }
+  
+  /* Social Media Icons */
+  .footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social .social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-social .social-icons img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer-social .social-icons a:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  /* Responsive Footer */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-container div {
+      margin: 10px 0;
+    }
+  
+    .footer-social .social-icons {
+      justify-content: center;
+    }
+  }
+  /* General Slideshow Styling */
+.slideshow-container {
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px; /* Space between header and slideshow */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Slide Container Setup */
+  .slide-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    position: relative;
+    height: 100%;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+  
+  /* Image Styling */
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the container and look good on different screen sizes */
+    border-radius: 15px;
+  }
+  
+  /* Caption Styling */
+  .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Fade-in Effect on Caption */
+  .slide:hover .caption {
+    opacity: 1;
+  }
+  
+  /* Fade Animation for Slides */
+  .fade {
+    animation: fade 5s ease-in-out infinite;
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0;
+    }
+    20%, 80% {
+      opacity: 1;
+    }
+  }
+  
+  /* Transition Effects for Slideshow */
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive Adjustment */
+  @media screen and (max-width: 768px) {
+    .caption {
+      font-size: 18px;
+      bottom: 15px;
+      left: 15px;
+    }
+  
+    .slideshow-container {
+      height: 300px; /* Adjust slideshow height for smaller screens */
+    }
+  }
+/* Family Section Styling */
+.family-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  .family-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .family-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .family-member {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .family-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;    
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 999;
+    opacity: 1; /* Ensure the caption is fully visible */
+    visibility: visible; /* Make sure the caption is visible */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .family-member {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .family-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .family-container {
+      justify-content: center;
+    }
+    .caption {
+      font-size: 10px;
+    }
+  }
+ /* Initial CSS for animation */
+.animate-section {
+  opacity: 0;
+  transform: translateY(10vh) translateX(-20vw); /* Initial position off the bottom and slightly left */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition for both opacity and transform */
+}
+/* Loading Screen Styles */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; /* Ensure it's above everything */
+}
+
+#loading-screen p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #2193b0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hidden Class for Main Content */
+.hidden {
+  display: none;
+}
+
+/* Main Content Styling (after loading) */
+#main-content {
+  text-align: center;
+}
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0); /* Move to its original position */
+}
