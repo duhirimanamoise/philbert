@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Page</title>
+  <!-- Link the CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+</head>
+<body>
+  <div class="password-container">
+    <h1>Welcome</h1>
+    <p>PHILBERT's portfolio is protected</p>
+    <form onsubmit="return checkPassword()" class="password-form">
+      <input type="password" id="password-input" placeholder="Enter password">
+      <button type="submit">Unlock</button>
+    </form>
+    <p id="error-message"></p>
+  </div>
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Philbert</p>
+  </div>
+
+  <!-- Link the JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

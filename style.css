@@ -1,0 +1,149 @@
+/* General body styling for responsiveness */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0); /* Gradient background */
+    color: #fff; /* White text color */
+  }
+  
+  /* Styling for the container */
+  .password-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%; /* Makes it mobile-friendly */
+  }
+  
+  /* Heading styling */
+  .password-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph styling */
+  .password-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  .password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Input field styling */
+  .password-form input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 95%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button styling */
+  .password-form button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background: #2193b0; /* Matches gradient */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .password-form button:hover {
+    background: #176f86; /* Darker blue for hover effect */
+  }
+  
+  /* Error message styling */
+  #error-message {
+    font-size: 0.9rem;
+    color: #ff4d4d; /* Bright red for error messages */
+    margin-top: 10px;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .password-container {
+      padding: 15px;
+    }
+  
+    .password-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .password-form input[type="password"] {
+      font-size: 0.9rem;
+    }
+  
+    .password-form button {
+      font-size: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .password-form input[type="password"] {
+        width: 95%;
+    }
+  }
+  /* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999; /* Ensure it's above everything */
+  }
+  
+  #loading-screen p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Spinner Animation */
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #2193b0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Keyframes for spinner animation */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Hidden Class for Main Content */
+  .hidden {
+    display: none;
+  }
+  
+  /* Main Content Styling (after loading) */
+  #main-content {
+    text-align: center;
+  }
